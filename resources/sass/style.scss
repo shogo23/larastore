@@ -1,0 +1,76 @@
+body {
+    background-color: $background;
+}
+
+.clear {
+    clear: both;
+}
+
+.mainHeader {
+    border: 1px solid map-get($headerTop, bgColor);
+    background-color: map-get($headerTop, bgColor);
+    color: map-get($headerTop, font-color);
+    padding: 10px;
+
+    .headerTop {
+
+        //  Responsive Alignments
+        //
+        .logo {
+            float: left;
+            width: 10%;
+        }
+
+        .searchContainer {
+            float: left;
+            width: 69%;
+            margin-top: 1px;
+        }
+
+        .userPanel {
+            float: left;
+            width: 20%;
+        }
+
+
+        //  Layouts
+        //
+        .logo {
+            font-family: Anton;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .searchContainer {
+            border: 1px solid map-get($searchInputHeader, borderColor);
+            background-color: map-get($searchInputHeader, bgColor);
+            color: map-get($searchInputHeader, fontColor);
+
+            .searchInput {
+                border: 1px solid map-get($searchInputHeader, borderColor);
+                // border: 1px solid red;
+                margin: 0;
+                width: 94%;
+                outline: none;
+                padding: 5px;
+            }
+        }
+
+        .userPanel {
+            text-align: center;
+
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                }
+
+                li:first-child {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
